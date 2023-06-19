@@ -1,0 +1,48 @@
+=================================
+Inventory System - Usage Guide
+=================================
+
+This usage guide provides an overview of the available options and their usage for the Inventory System.
+
+Options:
+    buy: Record the purchase of a product.
+    sell: Record the sale of a product.
+    report: Generate an inventory report for a specified day.
+    report-revenue-profit: Generate a revenue and profit report for a specified time period.
+
+General Usage:
+    python main.py <option> [arguments]
+
+Options and Arguments:
+    buy:
+        -p, --product-name <name>: Name of the product.
+        -d, --buy-date <date>: Date when the product was bought.
+        --price <price>: Buying price of the product.
+        -e, --expiration-date <date>: Expiration date of the product.
+
+        Example: python main.py buy -p "Apple" -d "2023-06-13" --price 0.5 -e "2023-06-20"
+
+    sell:
+        -p, --product-name <name>: Name of the product.
+        --sell-date <date>: Date of selling the product.
+        --sell-price <price>: Selling price of the product.
+
+        Example: python main.py sell -p "Apple" --sell-date "2023-06-13" --sell-price 0.75
+
+    report:
+        --now: Report inventory for the current day.
+        --yesterday: Report inventory for the previous day.
+
+        Example: python main.py report --now
+
+    report-revenue-profit:
+        --start-date <date>: Start date for revenue and profit reporting.
+        --end-date <date>: End date for revenue and profit reporting.
+
+        Example: python main.py report-revenue-profit --start-date "2023-06-01" --end-date "2023-06-13"
+
+Advanced Options:
+    --advance-time <days>: Advance the current day by the specified number of days.
+
+        Example: python main.py --advance-time 7
+
